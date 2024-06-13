@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 3 web 1</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+<body>
+    <section class="agendar-evento">
+        <div class="div-hijo1">
+            <h1>Gestionar Evento</h1>
+            <div>
+                <p>Fecha <input type="date" id="fecha"></p>
+                
+                <p>Selecciona una hora: <select id="horaCombobox" name="horaCombobox"></select></p>
+                <label for="horaCombobox"></label>
+                
+                <p>Descripcion: <input type="text" id="descripcion" name="descripcion" placeholder="Ingresa una descripción"></p>
+                
+                <p>Nombres de los participantes:</p>
+                <input type="text" id="participantes" name="participantes" placeholder="Ingrese los participantes">
+                
+                
+                <button onclick="guardarEvento()">Guardar</button>
+                
+                <input type="text" id="buscar">
+                <button onclick="consultarEvento()">Buscar</button>
+              
+                <input type="text" id="eliminar">
+                <button onclick="eliminarEvento()">Eliminar</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button onclick="prevMonth()">&#9664;</button>
+            <div>
+                <h1 id="monthName">Enero</h1>
+                <p id="yearNumber">2022</p>
+            </div>
+            <button onclick="nextMonth()">&#9654;</button>
+        </div>
+        <div class="calendar">
+            <div class="day-name">
+            <table>
+                <tr>
+                <td>Lunes</td>
+                <td>Martes</td>
+                <td>Miercoles</td>
+                <td>      Viernes</td>
+                <td>   Sabado</td>
+                <td>Domingo</td>
+                </tr>
+            </table>
+        </div>
+            <div class="day-name"></div>
+            <div class="day-name"></div>
+            <div class="day-name"></div>
+            <div class="day-name"></div>
+            <div class="day-name"></div>
+            <div class="day-name"></div>
+            <div id="days">
+                <!-- Los días del calendario se generarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/gestioncalendario.js"></script>
+</body>
+</html>
